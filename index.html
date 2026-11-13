@@ -36,9 +36,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 /* ---------- COVER ---------- */
 .cover{min-height:100svh;max-width:560px;margin:0 auto;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:60px 24px 56px;position:relative;overflow:hidden;
-  background:linear-gradient(180deg,rgba(16,17,15,.65) 0%,rgba(16,17,15,.85) 100%),url('public/WhatsApp Image 2026-11-12 at 21.36.10.jpeg') center center/cover no-repeat}
-.cover:before{content:"";position:absolute;inset:15px;border:2px solid var(--gold);pointer-events:none;z-index:2;box-shadow:inset 0 0 0 2px rgba(212,175,55,.2)}
-.cover:after{content:"";position:absolute;inset:22px;border:1px dashed rgba(247,231,180,.35);pointer-events:none;z-index:2}
+  background:linear-gradient(180deg,transparent 0%,transparent 44%,rgba(14,22,19,.55) 58%,rgba(14,22,19,.92) 80%,rgba(14,22,19,.98) 100%),url('public/WhatsApp Image 2026-11-12 at 21.36.12.jpeg') center center/cover no-repeat}
+.cover:before{content:"";position:absolute;inset:16px;border:1.2px solid rgba(212,175,55,.75);pointer-events:none;z-index:2}
+.cover:after{content:"";position:absolute;inset:23px;border:1px solid rgba(247,231,180,.32);pointer-events:none;z-index:2}
 .cover-small{font-family:'Playfair Display',serif;font-size:18px;letter-spacing:.06em;text-shadow:0 2px 10px #000}
 .cover-names{font-family:'Berkshire Swash',cursive;font-weight:400;font-size:clamp(40px,11vw,58px);line-height:1.15;margin:6px 0 10px;background:linear-gradient(135deg,#fff 10%,var(--gold-l) 50%,var(--gold) 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 18px rgba(0,0,0,.9))}
 .cover-date{font-family:'Playfair Display',serif;font-size:17px;text-shadow:0 2px 10px #000}
@@ -46,8 +46,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .cd div{display:flex;flex-direction:column;align-items:center;min-width:54px;padding:8px 10px;background:rgba(14,22,19,.5);border:1px solid rgba(212,175,55,.35);border-radius:6px;backdrop-filter:blur(6px);box-shadow:0 4px 14px rgba(0,0,0,.45)}
 .cd b{font-family:'Playfair Display',serif;font-weight:500;font-size:32px;line-height:1.1;font-variant-numeric:tabular-nums}
 .cd span{font-size:12px;color:var(--soft)}
-.guest-label{font-size:12px;color:var(--soft)}
-.guest{font-family:'Playfair Display',serif;font-weight:700;font-size:19px;color:var(--gold-l);margin:2px 0 18px}
 
 /* ---------- TOMBOL ---------- */
 .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#e2bc61,#ba8c32);color:#101714;border:0;padding:12px 26px;border-radius:4px;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;box-shadow:0 4px 14px rgba(212,175,55,.25);transition:all .2s}
@@ -61,11 +59,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 #invitation{display:none;opacity:0;transition:opacity .9s ease;max-width:560px;margin:0 auto;background:var(--bg)}
 #invitation.show{opacity:1}
 #loading{position:fixed;inset:0;z-index:9999;display:none;opacity:0;transition:opacity .4s ease;overflow:hidden}
-#loading::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,19,.6) 0%,rgba(14,22,19,.85) 100%),url('public/WhatsApp Image 2026-11-12 at 21.36.10 (2).jpeg') center/cover no-repeat;transform:scale(1.16);transition:transform 1.9s cubic-bezier(.1,.8,.2,1)}
+#loading::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,19,.15) 0%,rgba(14,22,19,.4) 100%),url('public/WhatsApp Image 2026-11-12 at 21.36.11 (2).jpeg') center/cover no-repeat;transform:scale(1.1);transition:transform 1.9s cubic-bezier(.1,.8,.2,1)}
 #loading.show{opacity:1}
 #loading.show::before{transform:scale(1)}
 #loading-bar{position:absolute;bottom:0;left:0;height:3.5px;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-l));box-shadow:0 0 12px var(--gold);transition:width 1.75s cubic-bezier(.2,.8,.2,1);z-index:2}
 #loading.show #loading-bar{width:100%}
+.loading-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-46%) scale(.96);opacity:0;transition:all 1.1s cubic-bezier(.16,1,.3,1) .1s;text-align:center;width:90%;max-width:440px;z-index:2;pointer-events:none;filter:drop-shadow(0 0 22px rgba(212,175,55,.6)) drop-shadow(0 4px 16px rgba(0,0,0,.95))}
+#loading.show .loading-center{opacity:1;transform:translate(-50%,-50%) scale(1)}
 
 section{padding:76px 30px;text-align:center;position:relative;overflow:hidden}
 section > *:not(.fl){position:relative;z-index:1}
@@ -83,10 +83,10 @@ h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(26px,6.4
 .ayat{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-l);margin-bottom:18px}
 
 /* mempelai */
-#mempelai{padding-top:96px;background:linear-gradient(180deg,rgba(14,22,19,.58) 0%,rgba(14,22,19,.7) 40%,rgba(14,22,19,.88) 100%),url('public/WhatsApp Image 2026-11-12 at 21.36.12.jpeg') center center/cover no-repeat;background-attachment:fixed}
+#mempelai{padding-top:96px;background:linear-gradient(180deg,transparent 0%,rgba(14,22,19,.2) 30%,rgba(14,22,19,.65) 60%,rgba(14,22,19,.95) 90%,rgba(14,22,19,.98) 100%),url('public/WhatsApp Image 2026-11-12 at 21.36.12.jpeg') center center/cover no-repeat;background-attachment:fixed}
 #mempelai h2,#mempelai .lead,#mempelai .salam,#mempelai .ayat,#mempelai .parents{text-shadow:0 2px 12px rgba(0,0,0,.9)}
 .arch{width:min(300px,80%);margin:44px auto 52px;border-radius:200px 200px 0 0;overflow:hidden;border:2px solid var(--gold);box-shadow:0 16px 36px rgba(0,0,0,.7),0 0 20px rgba(212,175,55,.25)}
-.arch img{display:block;width:100%;height:380px;object-fit:cover;will-change:transform}
+.arch img{display:block;width:100%;height:380px;object-fit:cover}
 .person{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.2,.8,.2,1)}
 .person.revealed{opacity:1;transform:none}
 .person + .person{margin-top:0}
@@ -150,11 +150,11 @@ footer{text-align:center;padding:20px 20px 110px;font-size:12px;color:var(--mute
 .fl-tr{top:0;right:0;transform:scaleX(-1)}
 .fl-bl{bottom:0;left:0;transform:scaleY(-1)}
 .fl-br{bottom:0;right:0;transform:scale(-1,-1)}
-.corner-ornament{position:absolute!important;width:56px;height:56px;pointer-events:none;z-index:3;filter:drop-shadow(0 2px 6px rgba(0,0,0,.85))}
-.co-tl{top:15px;left:15px}
-.co-tr{top:15px;right:15px;transform:scaleX(-1)}
-.co-bl{bottom:15px;left:15px;transform:scaleY(-1)}
-.co-br{bottom:15px;right:15px;transform:scale(-1,-1)}
+.corner-ornament{position:absolute!important;width:48px;height:48px;pointer-events:none;z-index:3;filter:drop-shadow(0 2px 6px rgba(0,0,0,.85))}
+.co-tl{top:16px;left:16px}
+.co-tr{top:16px;right:16px;transform:scaleX(-1)}
+.co-bl{bottom:16px;left:16px;transform:scaleY(-1)}
+.co-br{bottom:16px;right:16px;transform:scale(-1,-1)}
 .arch-wrap{position:relative;width:min(300px,80%);margin:44px auto 52px}
 .arch-wrap .arch{width:100%;margin:0}
 .arch-ornament{position:absolute!important;width:58px;height:58px;pointer-events:none;z-index:3}
@@ -165,19 +165,21 @@ footer{text-align:center;padding:20px 20px 110px;font-size:12px;color:var(--mute
 
 /* ---------- NAVIGASI ---------- */
 @keyframes spin{to{transform:rotate(360deg)}}
-.nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:none;align-items:center;width:calc(100% - 32px);max-width:440px;background:linear-gradient(180deg,rgba(21,34,29,.95) 0%,rgba(14,22,19,.98) 100%);border:1.5px solid var(--gold);border-radius:40px;padding:9px 6px;z-index:998;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 12px 36px rgba(0,0,0,.8),0 0 20px rgba(212,175,55,.28),inset 0 1px 0 rgba(247,231,180,.35)}
-.nav a{flex:1 1 0;color:#eee3d0;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:4px 2px;border-radius:24px;transition:all .25s ease}
+.nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:none;align-items:center;width:calc(100% - 32px);max-width:440px;background:rgba(18,28,24,.92);border:1px solid rgba(212,175,55,.4);border-radius:14px;padding:8px 6px;z-index:998;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 30px rgba(0,0,0,.7)}
+.nav a{flex:1 1 0;color:#eee3d0;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:4px 2px;border-radius:8px;transition:all .25s ease}
 .nav a + a{position:relative}
 .nav a + a::before{content:"";position:absolute;left:0;top:15%;bottom:15%;width:1px;background:rgba(212,175,55,.18)}
 .nav a i{font-size:16px;color:var(--gold-l);transition:transform .25s ease,color .25s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.7))}
 .nav a:hover{color:#fff;background:rgba(212,175,55,.12);transform:translateY(-2px)}
 .nav a:hover i{color:#fff;transform:scale(1.15);filter:drop-shadow(0 0 8px var(--gold))}
-.music-card{display:flex;align-items:center;gap:12px;max-width:380px;margin:20px auto;padding:8px 12px;background:rgba(21,34,29,.85);border:1.5px solid var(--gold);border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.6),0 0 12px rgba(212,175,55,.2);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.mc-cover{width:46px;height:46px;border-radius:8px;object-fit:cover;border:1px solid rgba(212,175,55,.4);flex-shrink:0}
+.music-card{display:flex;align-items:center;gap:12px;max-width:340px;margin:16px auto 36px;padding:8px 14px 10px;background:rgba(18,28,24,.88);border:none;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.7);cursor:pointer;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.mc-cover{width:38px;height:38px;border-radius:8px;object-fit:cover;border:none;flex-shrink:0}
 .mc-info{flex:1;min-width:0;text-align:left}
-.mc-title{font-size:13px;font-weight:700;color:#f7e7b4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mc-artist{font-size:11px;color:#cfc5b4;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mc-btn{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));border:none;color:#0e1613;display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.mc-title{font-size:12.5px;font-weight:600;color:#f7e7b4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mc-artist{font-size:10.5px;color:#cfc5b4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mc-btn{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));border:none;color:#0e1613;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.mc-progress{position:absolute;bottom:0;left:0;right:0;height:2px;background:rgba(255,255,255,.08)}
+.mc-bar{width:0%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-l));transition:width .25s linear}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -212,16 +214,12 @@ footer{text-align:center;padding:20px 20px 110px;font-size:12px;color:var(--mute
       <stop offset="0%" stop-color="#fff"/><stop offset="35%" stop-color="#f7e7b4"/><stop offset="70%" stop-color="#d4af37"/><stop offset="100%" stop-color="#9a7318"/>
     </linearGradient>
     <symbol id="gold-corner" viewBox="0 0 60 60">
-      <path d="M0 0 L48 0" stroke="url(#cg)" stroke-width="2"/>
-      <path d="M0 0 L0 48" stroke="url(#cg)" stroke-width="2"/>
-      <path d="M0 16 L16 0" stroke="url(#cg)" stroke-width="1.5"/>
-      <path d="M6 24 L24 6" stroke="#f7e7b4" stroke-width="1" stroke-dasharray="2 2"/>
-      <path d="M17 8 L19.5 14.5 L26 17 L19.5 19.5 L17 26 L14.5 19.5 L8 17 L14.5 14.5 Z" fill="url(#cg)"/>
-      <circle cx="17" cy="17" r="2" fill="#0e1613" stroke="url(#cg)" stroke-width="0.8"/>
-      <path d="M6 44 C6 32 18 28 24 33 C28 36 26 42 21 41 C17 41 16 37 19 35" fill="none" stroke="url(#cg)" stroke-width="1.2" stroke-linecap="round"/>
-      <path d="M44 6 C32 6 28 18 33 24 C36 28 42 26 41 21 C41 17 37 16 35 19" fill="none" stroke="url(#cg)" stroke-width="1.2" stroke-linecap="round"/>
-      <circle cx="48" cy="0" r="2.5" fill="url(#cg)"/><circle cx="0" cy="48" r="2.5" fill="url(#cg)"/>
-      <circle cx="4" cy="4" r="2" fill="url(#cg)"/><circle cx="28" cy="28" r="1.8" fill="url(#cg)"/>
+      <path d="M0 0 L48 0" stroke="url(#cg)" stroke-width="1.6"/>
+      <path d="M0 0 L0 48" stroke="url(#cg)" stroke-width="1.6"/>
+      <path d="M0 14 L14 0" stroke="url(#cg)" stroke-width="1.2"/>
+      <path d="M16 6 L18.5 13 L26 16 L18.5 19 L16 26 L13.5 19 L6 16 L13.5 13 Z" fill="url(#cg)"/>
+      <circle cx="16" cy="16" r="2" fill="#0e1613" stroke="url(#cg)" stroke-width="0.8"/>
+      <circle cx="48" cy="0" r="2.2" fill="url(#cg)"/><circle cx="0" cy="48" r="2.2" fill="url(#cg)"/>
     </symbol>
   </defs>
 </svg>
@@ -240,12 +238,17 @@ footer{text-align:center;padding:20px 20px 110px;font-size:12px;color:var(--mute
     <div><b id="cd-minutes">00</b><span>Menit</span></div>
     <div><b id="cd-seconds">00</b><span>Detik</span></div>
   </div>
-  <div class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i</div>
-  <div class="guest" id="guest">Tamu Undangan</div>
   <button class="btn" onclick="openInvitation()"><i class="fa-regular fa-envelope-open"></i> Buka Undangan</button>
 </div>
 
-<div id="loading"><div id="loading-bar"></div></div>
+<div id="loading">
+  <div class="loading-center">
+    <div class="cover-small">Pernikahan</div>
+    <div class="cover-names">Nilzabul &amp; Fauzul</div>
+    <div class="cover-date">Sabtu, 21 November 2026</div>
+  </div>
+  <div id="loading-bar"></div>
+</div>
 
 <main id="invitation">
 
@@ -256,26 +259,28 @@ footer{text-align:center;padding:20px 20px 110px;font-size:12px;color:var(--mute
     <div style="margin:12px auto 16px;display:flex;justify-content:center"><svg width="150" height="22" viewBox="0 0 200 28"><path d="M10 14 H72" stroke="#c89d45" stroke-width="1.2"/><path d="M128 14 H190" stroke="#c89d45" stroke-width="1.2"/><path d="M100 4 L110 14 L100 24 L90 14 Z" fill="#c89d45" fill-opacity="0.3" stroke="#f6e2a7" stroke-width="1.2"/><circle cx="100" cy="14" r="3" fill="#f6e2a7"/><circle cx="80" cy="14" r="2" fill="#c89d45"/><circle cx="120" cy="14" r="2" fill="#c89d45"/></svg></div>
     <div class="kicker">Undangan Pernikahan</div>
     <p class="salam">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
-    <h2>Kami mengundang Anda ke pernikahan kami</h2>
-    <p class="lead">Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.</p>
-
-    <div class="music-card" onclick="togglePlayMusic()" role="button" aria-label="Putar atau jeda musik">
-      <img src="public/WhatsApp Image 2026-11-12 at 21.36.10 (1).jpeg" alt="Lagu Pernikahan Kita" class="mc-cover">
-      <div class="mc-info">
-        <div class="mc-title">Lagu Pernikahan Kita</div>
-        <div class="mc-artist">Tiara Andini, Arsy Widianto</div>
-      </div>
-      <button class="mc-btn" type="button" aria-label="Putar musik"><i class="fa-solid fa-play" id="mc-icon"></i></button>
-    </div>
-
 
     <div class="arch-wrap">
       <div class="arch">
-        <img src="public/WhatsApp Image 2026-11-12 at 21.36.10 (1).jpeg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80';" alt="Nilzabul &amp; Fauzul">
+        <img src="public/WhatsApp Image 2026-11-12 at 21.36.10.jpeg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80';" alt="Nilzabul &amp; Fauzul">
       </div>
       <svg class="arch-ornament arch-bl" aria-hidden="true"><use href="#gold-corner"></use></svg>
       <svg class="arch-ornament arch-br" aria-hidden="true"><use href="#gold-corner"></use></svg>
     </div>
+    <div class="music-box">
+      <div class="music-card" onclick="togglePlayMusic()" role="button" aria-label="Putar atau jeda musik">
+        <img src="public/WhatsApp Image 2026-11-12 at 21.36.11 (2).jpeg" alt="Lagu Pernikahan Kita" class="mc-cover">
+        <div class="mc-info">
+          <div class="mc-title">Lagu Pernikahan Kita</div>
+          <div class="mc-artist">Tiara Andini, Arsy Widianto</div>
+        </div>
+        <button class="mc-btn" type="button" aria-label="Putar musik"><i class="fa-solid fa-play" id="mc-icon"></i></button>
+      </div>
+      <div class="mb-progress"><div class="mb-bar" id="mb-bar"></div></div>
+    </div>
+
+    <h2>Kami mengundang Anda ke pernikahan kami</h2>
+    <p class="lead">Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.</p>
 
     <div class="person">
       <p class="role">Mempelai wanita</p>
@@ -387,14 +392,16 @@ footer{text-align:center;padding:20px 20px 110px;font-size:12px;color:var(--mute
 
 <script>
 const nomorWhatsApp = "6281264774554";
-const namaTamu = new URLSearchParams(location.search).get("to");
-if (namaTamu) document.getElementById("guest").textContent = namaTamu;
 
 function togglePlayMusic() {
   const m = document.getElementById("bg-music"), ic = document.getElementById("mc-icon");
   if (m.paused) { m.play(); ic.className = "fa-solid fa-pause"; }
   else { m.pause(); ic.className = "fa-solid fa-play"; }
 }
+document.getElementById("bg-music").ontimeupdate = function() {
+  const b = document.getElementById("mb-bar");
+  if (this.duration && b) b.style.width = (this.currentTime / this.duration * 100) + "%";
+};
 
 function openInvitation() {
   const cover = document.getElementById("cover"), inv = document.getElementById("invitation"), loader = document.getElementById("loading");
@@ -466,12 +473,6 @@ const scrollObs = new IntersectionObserver((es) => {
   es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("revealed"); scrollObs.unobserve(e.target); } });
 }, { threshold: 0.15 });
 document.querySelectorAll("section, .gallery, .ev, .person").forEach(el => scrollObs.observe(el));
-
-window.addEventListener("scroll", () => {
-  const y = window.pageYOffset;
-  const archImg = document.querySelector(".arch img");
-  if (archImg) archImg.style.transform = `scale(1.08) translateY(${((y - 450) * 0.08).toFixed(1)}px)`;
-}, { passive: true });
 
 </script>
 </body>

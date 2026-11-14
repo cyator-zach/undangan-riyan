@@ -482,9 +482,9 @@ const lenis = typeof Lenis !== "undefined" ? new Lenis({
   duration: 3,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smoothWheel: true,
-  syncTouch: true,
-  touchMultiplier: 0.90,
-  wheelMultiplier: 0.4
+  syncTouch: false,
+  // touchMultiplier: 0.90,
+  // wheelMultiplier: 0.4
 }) : null;
 if (lenis) {
   window.lenis = lenis;

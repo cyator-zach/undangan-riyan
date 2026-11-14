@@ -479,12 +479,12 @@ const scrollObs = new IntersectionObserver((es) => {
 document.querySelectorAll("section, .gallery, .ev, .person").forEach(el => scrollObs.observe(el));
 
 const lenis = typeof Lenis !== "undefined" ? new Lenis({
-  duration: 2.0,
+  duration: 1.0,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smoothWheel: true,
   syncTouch: true,
-  touchMultiplier: 0.55,
-  wheelMultiplier: 0.7
+  touchMultiplier: 0.35,
+  wheelMultiplier: 0.4
 }) : null;
 if (lenis) {
   window.lenis = lenis;
